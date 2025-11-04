@@ -12,9 +12,3 @@ jobs:
       event_name: ${{ github.event_name }}
       tool: npm
       artifact_path: dist
-      publish_npm: "false"
-      publish_docker: "false"
-      publish_python: "false"
-      publish_firefox_extension: "false"
-      publish_android: "false"
-      publish_github_release: "false"
