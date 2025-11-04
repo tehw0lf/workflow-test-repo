@@ -13,6 +13,7 @@ permissions:
 jobs:
   build:
     uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
+    secrets: inherit
     with:
       event_name: ${{ github.event_name }}
       tool: npm
