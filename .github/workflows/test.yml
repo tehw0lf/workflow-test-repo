@@ -9,8 +9,8 @@ jobs:
   build:
     uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
     with:
+      event_name: ${{ github.event_name }}
       tool: npm
-      node_version: "20"
       artifact_path: dist
       publish_npm: "false"
       publish_docker: "false"
