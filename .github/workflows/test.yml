@@ -7,6 +7,9 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      actions: write
     uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
     with:
       event_name: ${{ github.event_name }}
