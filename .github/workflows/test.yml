@@ -1,0 +1,20 @@
+name: Test Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
+    with:
+      tool: npm
+      node_version: "20"
+      artifact_path: dist
+      publish_npm: "false"
+      publish_docker: "false"
+      publish_python: "false"
+      publish_firefox_extension: "false"
+      publish_android: "false"
+      publish_github_release: "false"
